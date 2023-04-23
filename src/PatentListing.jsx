@@ -6,7 +6,7 @@ function PatentListing() {
 
     const [params] = useSearchParams();
     const q = params.get('q');
-    const API = `http://api.patentsview.org/patents/query?q={"_text_phrase": {"patent_title":"${q}"}}`;
+    const API = `https://api.patentsview.org/patents/query?q={"_text_phrase": {"patent_title":"${q}"}}`;
     const [patents, setPatents] = useState([]);
     useEffect(() => {
         fetch(`${API}`)
