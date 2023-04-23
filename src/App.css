@@ -1,42 +1,37 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+#searchBar{
+  border-radius: 50px;
+  height: 75px;
+  width: 550px;
+  font-size: xx-large;
   text-align: center;
+  outline: 0px solid black;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#searchBar:focus{
+  outline: 1px solid black;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+#searchButton{
+  height: 75px;
+  margin: 10px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#searchButton:hover{
+  cursor: pointer;
+  filter: invert();
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#searchForm{
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#logo{
+  width: 500px;
+  margin-bottom: -50px;
+  margin-top: -300px;
 }
-
-.card {
-  padding: 2em;
+.patentListing{
+  border: 1px solid lightgreen;
+  padding: 10px;
 }
-
-.read-the-docs {
-  color: #888;
+#patentListings{
+  background-color: #383838;
+  margin-top: 100px;
 }
