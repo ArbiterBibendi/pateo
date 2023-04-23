@@ -61,6 +61,7 @@
   padding: 10px;
   margin: 5px;
   width: 50%;
+  border-radius: 10px;
 }
 .patentListing:hover{
   background-color: #727272;
