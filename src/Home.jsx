@@ -1,11 +1,14 @@
 import SearchBar from "./searchbar";
+import { Link } from "react-router-dom";
 import pateoSVG from '/src/assets/pateo.svg'
 function Home() {
     return ( 
-        <>
-            <img id='logo' src={pateoSVG} />
+        <div className="home">
+            <Link className='logoLink' to='/'>
+                <img className='logo' src={pateoSVG} />
+            </Link>
             <SearchBar />
-        </>
+        </div>
     );
 }
 

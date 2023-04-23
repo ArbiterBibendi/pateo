@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import NavBar from "./NavBar";
 
 function PatentListing() {
 
@@ -15,18 +16,25 @@ function PatentListing() {
                 console.log(data.patents);
             })
     }, [])
+
+    function renderPatents()
+    {
+        return patents.map((patent) => {
+            return (
+                <div key={patent.patent_id} className='patentListing'>
+                    <p>
+                        {patent.patent_id}
+                    </p>
+                    {patent.patent_title}
+                </div>
+            );
+        })
+    }
     return (
         <>
+        <NavBar />
             <div id='patentListings'>
-                {
-                    patents.map((patent) => {
-                        return (
-                            <div key={patent.patent_id} className='patentListing'>
-                                {`${patent.patent_id} ${patent.patent_title}`}
-                            </div>
-                        );
-                    })
-                }
+               {patents ? renderPatents() : 'No Patents Found'}
             </div>
         </>
     );

@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="128.0px"
-   height="128.0px"
-   viewBox="0 0 128.0 128.0"
+   width="116.58854"
+   height="34.192707"
+   viewBox="0 0 116.58854 34.192707"
    version="1.1"
    id="SVGRoot"
    sodipodi:docname="pateo.svg"
@@ -28,8 +28,8 @@
      inkscape:document-units="px"
      showgrid="true"
      inkscape:zoom="2.990248"
-     inkscape:cx="82.936266"
-     inkscape:cy="88.621413"
+     inkscape:cx="73.238073"
+     inkscape:cy="44.143496"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -38,41 +38,44 @@
      inkscape:current-layer="layer1">
     <inkscape:grid
        type="xygrid"
-       id="grid365" />
+       id="grid365"
+       originx="-9.9922071"
+       originy="-44.739543" />
   </sodipodi:namedview>
   <defs
      id="defs354">
     <rect
        x="1.0032613"
-       y="2.340943"
+       y="2.3409431"
        width="126.41092"
        height="125.07324"
        id="rect432" />
     <rect
-       x="6.0195677"
+       x="6.0195675"
        y="13.376817"
        width="93.303299"
-       height="54.51053"
+       height="54.510529"
        id="rect426" />
   </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-9.992207,-44.739544)">
     <text
        xml:space="preserve"
        id="text424"
-       style="fill:#000000;white-space:pre;shape-inside:url(#rect426)" />
+       style="white-space:pre;shape-inside:url(#rect426);fill:#000000" />
     <text
        xml:space="preserve"
        id="text430"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333333px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;white-space:pre;shape-inside:url(#rect432);fill:#000000"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;white-space:pre;shape-inside:url(#rect432);fill:#000000"
        x="-15.758789"
        y="0"
        transform="translate(3.0097838,29.428997)"><tspan
-         x="2.5032567"
-         y="49.008462"
-         id="tspan4530">Pateo</tspan></text>
+         x="2.503292"
+         y="49.008436"
+         id="tspan265">Pateo</tspan></text>
     <path
        style="fill:#000000;stroke-width:0.33442"
        d=""
