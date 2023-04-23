@@ -13,7 +13,6 @@ function PatentListing() {
             .then((res) => res.json())
             .then((data) => {
                 setPatents(data.patents);
-                console.log(data.patents);
             })
     }, [])
 

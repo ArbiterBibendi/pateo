@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import NavSearchBar from "./NavSearchBar";
+import pateoSVG from '/src/assets/pateo.svg'
 
 function NavBar() {
     return (
         <>
             <nav>
                 <Link to='/'>
-                    <img className='banner' src="/src/assets/pateo.svg" />
+                    <img className='banner' src={pateoSVG} />
                 </Link>
                 <NavSearchBar id='navSearch' />
             </nav>
