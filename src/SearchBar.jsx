@@ -3,7 +3,7 @@ import searchLogo from '/src/assets/simple-globe-search.svg'
 function SearchBar() {
 
     return (
-      <form id='searchForm' action='search' autoComplete='off'>
+      <form id='searchForm' action='./search' autoComplete='off'>
         <input 
           id='searchBar' 
           type="text"  

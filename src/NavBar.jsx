@@ -6,7 +6,7 @@ function NavBar() {
     return (
         <>
             <nav>
-                <Link to='/'>
+                <Link className="bannerLink" to='/'>
                     <img className='banner' src={pateoSVG} />
                 </Link>
                 <NavSearchBar id='navSearch' />
