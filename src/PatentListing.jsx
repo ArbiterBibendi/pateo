@@ -22,7 +22,7 @@ function PatentListing() {
             return (
                 <div key={patent.patent_id} className='patentListing'>
                     <p>
-                        {patent.patent_id}
+                        Patent Number: <b>{patent.patent_id}</b>
                     </p>
                     {patent.patent_title}
                 </div>

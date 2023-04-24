@@ -8,7 +8,7 @@ function SearchBar() {
           id='searchBar' 
           type="text"  
           name='q' 
-          placeholder='Search For Patent'
+          placeholder='Search For Patent (e.g., Robots)'
         />
         <input 
           type='image' 
