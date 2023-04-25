@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 
 function PatentListing() {
 
-    //https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/${PATENT_ID}
+
     const [params] = useSearchParams();
     const query = params.get('q');
     const q =
@@ -22,6 +22,7 @@ function PatentListing() {
             "patent_date",
         ]
     const API = `https://api.patentsview.org/patents/query?q=${JSON.stringify(q)}&f=${JSON.stringify(f)}`;
+    const PDF_API = `https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/`;
     const [patents, setPatents] = useState([]);
     useEffect(() => {
         fetch(`${API}`)
@@ -35,6 +36,9 @@ function PatentListing() {
         return patents.map((patent) => {
             return (
                 <div key={patent.patent_id} className='patentListing'>
+                    <h3>
+                        {patent.patent_title}
+                    </h3>
                     <p>
                         <b>Patent Number:</b> {patent.patent_id}
                     </p>
@@ -48,7 +52,9 @@ function PatentListing() {
                             })
                         }
                     </p>
-                    {patent.patent_title}
+                    <p>
+                        Link to PDF: <a target='_blank' href={PDF_API + patent.patent_id}>PDF</a>
+                    </p>
                 </div>
             );
         })

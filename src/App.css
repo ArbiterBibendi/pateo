@@ -1,6 +1,10 @@
 :root{
   --nav-height: 100px;
 }
+a{
+  color: aqua;
+  text-decoration: none;
+}
 .home{
   position: absolute;
   top: 50%;
