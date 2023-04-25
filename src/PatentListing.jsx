@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 
 function PatentListing() {
 
+    //https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/${PATENT_ID}
     const [params] = useSearchParams();
     const query = params.get('q');
     const q =
