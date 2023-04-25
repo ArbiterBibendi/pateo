@@ -5,8 +5,22 @@ import NavBar from "./NavBar";
 function PatentListing() {
 
     const [params] = useSearchParams();
-    const q = params.get('q');
-    const API = `https://api.patentsview.org/patents/query?q={"_text_phrase": {"patent_title":"${q}"}}`;
+    const query = params.get('q');
+    const q =
+    {
+        "_text_phrase": {
+            "patent_title": query
+        }
+    }
+    const f =
+        [
+            "patent_title",
+            "patent_id",
+            "inventor_first_name",
+            "inventor_last_name",
+            "patent_date",
+        ]
+    const API = `https://api.patentsview.org/patents/query?q=${JSON.stringify(q)}&f=${JSON.stringify(f)}`;
     const [patents, setPatents] = useState([]);
     useEffect(() => {
         fetch(`${API}`)
@@ -16,13 +30,22 @@ function PatentListing() {
             })
     }, [])
 
-    function renderPatents()
-    {
+    function renderPatents() {
         return patents.map((patent) => {
             return (
                 <div key={patent.patent_id} className='patentListing'>
                     <p>
-                        Patent Number: <b>{patent.patent_id}</b>
+                        <b>Patent Number:</b> {patent.patent_id}
+                    </p>
+                    <p>
+                        <b>Inventors:</b>
+                        {
+                            patent.inventors.map((inventor) => {
+                                const isNotLast = inventor !== patent.inventors[patent.inventors.length - 1];
+                                let commaIfNotLast = isNotLast ? ',' : '';
+                                return ` ${inventor.inventor_first_name} ${inventor.inventor_last_name}` + commaIfNotLast;
+                            })
+                        }
                     </p>
                     {patent.patent_title}
                 </div>
@@ -31,9 +54,9 @@ function PatentListing() {
     }
     return (
         <>
-        <NavBar />
+            <NavBar />
             <div id='patentListings'>
-               {patents ? renderPatents() : 'No Patents Found'}
+                {patents ? renderPatents() : 'No Patents Found'}
             </div>
         </>
     );
