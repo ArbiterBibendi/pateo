@@ -10,6 +10,7 @@ function NavSearchBar() {
           name='q' 
           placeholder='Search For Patent'
         />
+        <input type='hidden' name='p' value='1' />
         <input 
           type='image' 
           id='searchButton' 

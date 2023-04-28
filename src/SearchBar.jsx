@@ -10,6 +10,7 @@ function SearchBar() {
           name='q' 
           placeholder='Search For Patent (e.g., Robots)'
         />
+        <input type='hidden' name='p' value='1' />
         <input 
           type='image' 
           id='searchButton' 

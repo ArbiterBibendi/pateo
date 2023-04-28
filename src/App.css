@@ -104,3 +104,26 @@ nav{
   left: 50%;
   transform: translate(-65%);
 }
+
+#pageButtons{
+  display: flex;
+  min-width: 500px;
+  justify-content: center;
+}
+.pageButton{
+  color: beige;
+  background-color: #383838;
+  border: 1px solid #727272;
+  min-width: 10%;
+  margin: 10px;
+}
+.pageButton:hover{
+  cursor: pointer;
+}
+.pageButton:disabled{
+  background-color: #222222;
+  cursor: default;
+}
+#currentPage{
+  font-size: larger;
+}
