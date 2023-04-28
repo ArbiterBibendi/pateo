@@ -66,9 +66,10 @@ a{
   margin: 5px;
   width: 50%;
   border-radius: 10px;
+  transition: background-color 300ms;
 }
 .patentListing:hover{
-  background-color: #727272;
+  background-color: #555555;
 }
 #patentListings{
   display: flex;
@@ -127,4 +128,17 @@ nav{
 }
 #currentPage{
   font-size: larger;
+}
+.acknowledgement{
+  display: inline-block;
+}
+#ackLink{
+  color: #00aaaa;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  color: #727272;
 }

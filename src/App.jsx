@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import PatentListing from './PatentListing'
+import PatentListings from './PatentListings'
 import NotFound from './NotFound'
 import './App.css'
 
@@ -9,11 +9,11 @@ function App() {
 
   return (
     <>
-    <Routes>
-      <Route exact path='/' Component={Home}/>
-      <Route exact path='/search/' Component={PatentListing}/>
-      <Route path='*' Component={NotFound} />
-    </Routes>
+      <Routes>
+        <Route exact path='/' Component={Home} />
+        <Route exact path='/search/' Component={PatentListings} />
+        <Route path='*' Component={NotFound} />
+      </Routes>
     </>
   )
 }
