@@ -116,6 +116,7 @@ nav{
   border: 1px solid #727272;
   min-width: 10%;
   margin: 10px;
+  border-radius: 10px;
 }
 .pageButton:hover{
   cursor: pointer;

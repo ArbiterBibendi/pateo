@@ -8,6 +8,9 @@ function PatentListing() {
 
     const [params] = useSearchParams();
     const patenttitle = params.get('q');
+    let currentPage = Number(params.get('p') || 1);
+    currentPage = Math.max(1, currentPage);
+    
     const [query, setQuery] = useState(
         {
             "_text_phrase": {
@@ -16,7 +19,7 @@ function PatentListing() {
         });
     const [options, setOptions] = useState(
         {
-            "page": params.get('p') || 1
+            "page": currentPage
         });
     const [format, setFormat] = useState(
         [
@@ -33,8 +36,7 @@ function PatentListing() {
 
     function nextPage() {
         setOptions((currentOptions) => { 
-            let currentPage = Number(currentOptions["page"]);
-            currentPage = Math.max(1, currentPage);
+            let currentPage = currentOptions["page"];
             const newOptions = { 
                 "page": currentPage + 1 
             }
@@ -43,8 +45,7 @@ function PatentListing() {
     }
     function prevPage() {
         setOptions((currentOptions) => { 
-            let currentPage = Number(currentOptions["page"]);
-            currentPage = Math.max(1, currentPage);
+            let currentPage = currentOptions["page"];
             const newOptions = { 
                 "page": currentPage - 1 
             }
