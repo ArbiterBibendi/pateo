@@ -52,21 +52,11 @@ function PatentListings() {
         changePage(-1)
     }
     function renderPatents() {
-        return(
-        <>
-            {
-                patents.map((patent) => {
-                    return (
-                        <PatentListing key={patent.patent_id} patent={patent} />
-                    );
-                })
-            }
-            <div id='pageButtons'>
-                <button className='pageButton' onClick={prevPage} disabled={options.page <= 1}>-</button>
-                <p id='currentPage'>Page {options['page']}</p>
-                <button className='pageButton' onClick={nextPage}>+</button>
-            </div>
-        </>)
+        return patents.map((patent) => {
+            return (
+                <PatentListing key={patent.patent_id} patent={patent} />
+            );
+        })
     }
     return (
         <>
