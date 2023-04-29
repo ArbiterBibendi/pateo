@@ -11,8 +11,8 @@ function Home() {
                 <SearchBar />
             </div>
             <footer>
-                <p class='acknowledgement'>Powered by&nbsp;</p>
-                <a class='acknowledgement' id='ackLink' target='_blank' href='https://www.patentsview.org/'>PatentsView</a>
+                <p className='acknowledgement'>Powered by&nbsp;</p>
+                <a className='acknowledgement' id='ackLink' target='_blank' href='https://www.patentsview.org/'>PatentsView</a>
             </footer>
         </>
     );

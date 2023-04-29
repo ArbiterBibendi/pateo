@@ -5,7 +5,7 @@ function NavSearchBar() {
     return (
       <form id='navSearchForm' action='search' autoComplete='off'>
         <input 
-          id='searchBar' 
+          id='navSearchBar' 
           type="text"  
           name='q' 
           placeholder='Search For Patent'
