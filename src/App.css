@@ -59,11 +59,16 @@ a{
 #navSearchBar{
   border-radius: 50px;
   width: 100%;
-  font-size: 2.5vw;
+  font-size: 2vw;
   padding: 0.5rem;
   text-align: center;
   outline: 1px solid transparent;
   transition: outline 300ms;
+}
+@media(max-width: 500px){
+  #navSearchBar{
+    font-size: 3vw;
+  }
 }
 
 #navSearchBar:focus{
