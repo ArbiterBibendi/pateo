@@ -11,3 +11,7 @@ body{
   height: 100vh;
   position: relative;
 }
+a{
+  color: aqua;
+  text-decoration: none;
+}
