@@ -158,6 +158,9 @@ nav{
     height: 35%;
     margin-left: 0;
   }
+  .patentListing{
+    width: 70%;
+  }
 }
 
 #pageButtons{
