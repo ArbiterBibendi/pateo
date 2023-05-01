@@ -56,20 +56,17 @@ a{
   margin-left: 10px;
   transition: filter 300ms;
 }
+
 #navSearchBar{
   border-radius: 50px;
-  width: 100%;
+  width: auto;
   font-size: 2vw;
   padding: 0.5rem;
   text-align: center;
   outline: 1px solid transparent;
   transition: outline 300ms;
 }
-@media(max-width: 500px){
-  #navSearchBar{
-    font-size: 3vw;
-  }
-}
+
 
 #navSearchBar:focus{
   outline: 1px solid lightgreen;
@@ -116,41 +113,68 @@ a{
 }
 nav{
   height: var(--nav-height);
-  width: 100%;
+  width: 100vw;
+  margin: 0px;
   background-color: #383838;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 2fr;
+  grid-template-rows: 100%;
   align-items: center;
+  justify-items: center;
   position: fixed;
   top: 0;
 }
 .banner{
-  margin-left: 25%;
   transition: filter 300ms;
+  height: 100%;
+  width: 100%;
 }
 .banner:hover{
   filter: drop-shadow(0px 0px 15px lightgreen)
 }
+.bannerLink{
+  grid-column: 1;
+  width: auto;
+  height: 50%;
+  margin-left: 25px;
+}
 #navSearchForm{
+  grid-column: 3;
   display: flex;
   align-items: center;
   height: 100%;
-
-  position: relative;
-  left: 50%;
-  transform: translate(-70%);
+}
+@media(max-width: 750px){
+  #navSearchForm{
+    grid-column: 2;
+  }
+  nav{
+    grid-template-columns: 1fr 1fr;
+  }
+  #navSearchBar{
+    font-size: 3vw;
+  }
+  .bannerLink{
+    height: 35%;
+    margin-left: 0;
+  }
 }
 
 #pageButtons{
-  display: flex;
-  min-width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   justify-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
 }
 .pageButton{
   color: beige;
   background-color: #383838;
   border: 1px solid #727272;
-  min-width: 10%;
-  margin: 10px;
+  width: 100%;
+  height: 75%;
   border-radius: 10px;
 }
 .pageButton:hover{
