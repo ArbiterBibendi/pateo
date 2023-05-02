@@ -12,12 +12,7 @@ function PatentListings() {
     let currentPage = Number(params.get('p') || 1);
     currentPage = Math.max(1, currentPage);
 
-    const [query, setQuery] = useState(
-        {
-            "_text_phrase": {
-                "patent_title": patenttitle
-            }
-        });
+    const [query, setQuery] = useState( getQuery(params) );
     const [options, setOptions] = useState(
         {
             "page": currentPage
@@ -35,7 +30,32 @@ function PatentListings() {
     const PDF_API = `https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/`;
 
 
-
+    function getQuery(params)
+    {
+        const q = params.get('q');
+        let finalQuery = "";
+        if (params.get('searchby') == 'inventor'){
+            let lastSpaceIndex = q.lastIndexOf(' ');
+            if (lastSpaceIndex == -1){
+                finalQuery =  {"_eq": {"inventor_last_name": q} }
+            }
+            else{
+                let lastName = q.slice(lastSpaceIndex+1)
+                let firstName = q.slice(0, lastSpaceIndex);
+                finalQuery = {"_and": [
+                    {"_contains": {"inventor_first_name": firstName}},
+                    {"_contains": {"inventor_last_name": lastName}}
+                ]}
+            }
+        }
+        else
+        {
+            finalQuery = {"_text_phrase": {
+                "patent_title": q
+            }}
+        }
+        return finalQuery;
+    }
     function changePage(delta) {
         setOptions((currentOptions) => {
             let currentPage = currentOptions["page"];

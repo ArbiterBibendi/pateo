@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export const useSearch = (query, options, format) => {
     const API = `https://api.patentsview.org/patents/query?q=${JSON.stringify(query)}&o=${JSON.stringify(options)}&f=${JSON.stringify(format)}`;
+    console.log(API);
     const [patents, setPatents] = useState([]);
     useEffect(() => {
         fetch(`${API}`)
